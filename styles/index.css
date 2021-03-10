@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'mushroom';
-    src: url(/fonts/mushroom.ttf)  format('truetype');
+    src: url(/fonts/JetBrainsMono-Thin.ttf)  format('truetype');
 }
 
 body {

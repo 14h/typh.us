@@ -5,14 +5,18 @@ import Layout from "../components/layout";
 import {Canvas} from "../components/canvas";
 
 export default function Index() {
+    const date1 = new Date('2021');
+    const date2 = new Date();
+
+    const diffDays = parseInt((date2 - date1) / (1000 * 60 * 60 * 24), 10);
+
     return (
         <div className='overflow-y-hidden'>
             <Layout>
                 <Head/>
                 <Container>
-                    <motion.div
+                    <div
                         className='h-screen relative'
-                        layoutId='bg-black'
                     >
                         <Canvas
                             className='m-auto w-screen absolute top-0 left-0 right-0'
@@ -20,16 +24,15 @@ export default function Index() {
                         <div
                             className='flex flex-col items-center justify-center py-16 absolute top-0 left-0 right-0 bottom-0'>
                             <div className='flex flex-col items-center justify-center'>
-                                <motion.h1
+                                <h1
                                     className='text-6xl lg:text-8xl text-center text-white'
-                                    layoutId='layoutId'
                                 >
-                                    TYPH.US
-                                </motion.h1>
+                                    {diffDays}
+                                </h1>
                             </div>
                         </div>
 
-                    </motion.div>
+                    </div>
                 </Container>
             </Layout>
         </div>
