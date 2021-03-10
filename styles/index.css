@@ -1,0 +1,52 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+@font-face {
+    font-family: 'mushroom';
+    src: url(/fonts/mushroom.ttf)  format('truetype');
+}
+
+body {
+    color: #000;
+    font-family: mushroom, serif;
+    font-weight: normal;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .container-l {
+        max-width: 640px
+    }
+}
+@media (min-width: 768px) {
+    .container-l {
+        max-width: 768px
+    }
+}
+@media (min-width: 1024px) {
+    .container-l {
+        max-width:1024px
+    }
+}
+@media (min-width: 1280px) {
+    .container-l {
+        max-width:1440px!important;
+    }
+}
+
+.left-4 {
+    left: 1rem;
+}
+.right-4 {
+    right: 1rem;
+}
+.bottom-8 {
+    bottom: 2rem;
+}
