@@ -50,12 +50,12 @@ export const Canvas = props => {
         };
         const radius = (width / 2) + 180;
         const lineColorTransparent = '#000000'
-        const slices = 110 ;
+        const slices = 70 ;
         let _angle = 360 / slices;
         let _start = 0;
 
         const getPointOnCircle = function (deg, center, radius) {
-            const rad = ((deg + frameCount) * Math.PI/180);
+            const rad = ((deg + frameCount) * Math.PI/90);
 
             return {
                 x: center.x + radius * Math.cos(rad),
@@ -68,8 +68,8 @@ export const Canvas = props => {
             ctx.beginPath();
             ctx.strokeStyle = color;
             ctx.moveTo(start.x, start.y);
-            // ctx.lineTo(end.x, end.y);
-            ctx.bezierCurveTo(end.x, end.y, (Math.random() * 100 * end.y), (Math.random() * 100 * end.x), (Math.random() * 100 * end.y), (Math.random() * 100 * end.x));
+            ctx.lineTo(end.x, end.y);
+            ctx.bezierCurveTo(end.x, end.y, (Math.random() * 10 * end.y), (Math.random() * 10 * end.x), (Math.random() * 10 * end.y), (Math.random() * 100 * end.x));
             ctx.stroke();
 
         }
@@ -99,7 +99,7 @@ export const Canvas = props => {
 
         //Our draw came here
         const render = () => {
-            if (frameCount > 360) {
+            if (frameCount > 450) {
                 return;
             }
             frameCount++;
